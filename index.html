@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHAIK SAMEER — Future Software Engineer | Luxury Developer Portfolio</title>
+  
+  <!-- SEO & Social Metadata -->
+  <meta name="description" content="Shaik Sameer — Undergraduate Computer Science student and future software engineer. Explore my academic milestones, technical repertoire, and web development journey.">
+  <meta name="keywords" content="Shaik Sameer, Software Engineer, Computer Science, Web Developer, C, C++, JavaScript, Portfolio, Atmakur">
+  <meta name="author" content="Shaik Sameer">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SHAIK SAMEER — Future Software Engineer">
+  <meta property="og:description" content="A curious and self-motivated developer exploring web technologies and building a future in software engineering.">
+  <meta property="og:image" content="assets/images/sameer-portrait.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  
+  <!-- Google Fonts: Cinzel (Serif Luxury), Plus Jakarta Sans (Clean Modern), JetBrains Mono (Tech Code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==================== 1. PRELOADER & CINEMATIC INTRO ==================== -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-emblem">
+      <div class="preloader-orbit"></div>
+      <span class="preloader-monogram">SS</span>
+    </div>
+    <div class="preloader-text">SHAIK SAMEER</div>
+    <div class="preloader-bar-wrap">
+      <div class="preloader-bar"></div>
+    </div>
+  </div>
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress-bar"></div>
+
+  <!-- Custom Desktop Cursor Ambient Glow -->
+  <div id="cursor-halo"></div>
+  <div id="cursor-dot"></div>
+
+  <!-- Subtle Golden Dust Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-light ambient-light-1"></div>
+  <div class="ambient-light ambient-light-2"></div>
+  <div class="ambient-light ambient-light-3"></div>
+
+  <!-- ==================== 2. FLOATING LUXURY NAVBAR ==================== -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-link" aria-label="Shaik Sameer Home">
+        <div class="brand-emblem">
+          <span>SS</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SHAIK SAMEER</span>
+          <span class="brand-sub">PORTFOLIO</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#goals" class="nav-link">Goals</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav CTA & Mobile Hamburger -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn-nav-connect">
+          <span>Let's Connect</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Open Mobile Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Drawer -->
+  <div id="mobile-backdrop" class="mobile-nav-backdrop"></div>
+  <aside id="mobile-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-link">
+        <div class="brand-emblem"><span>SS</span></div>
+        <div class="brand-text">
+          <span class="brand-name">SHAIK SAMEER</span>
+          <span class="brand-sub">FUTURE ENGINEER</span>
+        </div>
+      </div>
+      <button id="drawer-close-btn" class="drawer-close-btn" aria-label="Close Mobile Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="#hero" class="mobile-nav-link active">Home <span>→</span></a></li>
+      <li class="mobile-nav-item"><a href="#about" class="mobile-nav-link">About Me <span>→</span></a></li>
+      <li class="mobile-nav-item"><a href="#education" class="mobile-nav-link">Education <span>→</span></a></li>
+      <li class="mobile-nav-item"><a href="#skills" class="mobile-nav-link">Technical Skills <span>→</span></a></li>
+      <li class="mobile-nav-item"><a href="#projects" class="mobile-nav-link">Projects Showcase <span>→</span></a></li>
+      <li class="mobile-nav-item"><a href="#goals" class="mobile-nav-link">Career Goals <span>→</span></a></li>
+      <li class="mobile-nav-item"><a href="#contact" class="mobile-nav-link">Get in Touch <span>→</span></a></li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <a href="mailto:sameersk1818@gmail.com" class="btn-luxury-primary" style="width: 100%; text-align: center;">
+        Contact Directly
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==================== 3. HERO SECTION ==================== -->
+  <section id="hero" class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Hero Text Column -->
+        <div class="hero-content reveal-init reveal-up">
+          <div class="hero-status-pill">
+            <span class="status-dot"></span>
+            <span>Currently Exploring & Learning • Open to Collaborations</span>
+          </div>
+
+          <h1 class="hero-name">SHAIK SAMEER</h1>
+
+          <div class="hero-headline">
+            <span>Computer Science Student</span>
+            <span class="headline-separator">•</span>
+            <span>Future Software Engineer</span>
+          </div>
+
+          <p class="hero-intro">
+            "A curious and self-motivated developer exploring web technologies and building a future in software engineering."
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn-luxury-primary">
+              <span>Let's Connect</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#education" class="btn-luxury-secondary">
+              <span>Academic Journey</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <span class="social-label">Find Me Online:</span>
+            <a href="https://github.com/sameer18180" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/ps%CA%8F%E1%B4%84%CA%9C%E1%B4%8F-s%E1%B4%80%E1%B4%8D%E1%B4%87%E1%B4%87%CA%80-1996b4358" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="mailto:sameersk1818@gmail.com" class="social-link btn-copy-email-trigger" aria-label="Email Shaik Sameer" title="Click to copy email">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Portrait Column -->
+        <div class="hero-portrait-wrapper reveal-init reveal-scale delay-200">
+          <div class="portrait-glow-halo"></div>
+          <div class="portrait-frame">
+            <span class="frame-bracket bracket-tl"></span>
+            <span class="frame-bracket bracket-tr"></span>
+            <span class="frame-bracket bracket-bl"></span>
+            <span class="frame-bracket bracket-br"></span>
+            <div class="portrait-inner">
+              <img src="assets/images/sameer-portrait.jpg" alt="Shaik Sameer — Future Software Engineer" loading="eager">
+            </div>
+            <div class="portrait-floating-badge">
+              <span class="badge-icon">✦</span>
+              <span class="badge-text">Future Software Engineer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator-wrap">
+        <div class="scroll-mouse">
+          <div class="scroll-pip"></div>
+        </div>
+        <span class="scroll-text">DISCOVER</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. ABOUT ME SECTION ==================== -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header reveal-init reveal-up">
+        <span class="section-badge">ABOUT ME</span>
+        <h2 class="section-title">Driven by Logic, <span class="gold-gradient">Elevated by Ambition</span></h2>
+        <p class="section-desc">
+          Bridging strong computer science fundamentals with modern web engineering to shape impactful digital solutions.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: Portrait Accent & Quote Card -->
+        <div class="about-image-card reveal-init reveal-left">
+          <div class="about-img-box">
+            <img src="assets/images/sameer-portrait.jpg" alt="Shaik Sameer Portrait" loading="lazy">
+          </div>
+          <div class="about-quote-box">
+            <p class="about-quote-text">
+              "A curious and self-motivated developer exploring web technologies and building a future in software engineering."
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Expanded Narrative -->
+        <div class="about-narrative-box reveal-init reveal-right delay-200">
+          <h3 class="about-headline">Engineering My Path in Computer Science & Web Technologies</h3>
+          
+          <p class="about-lead">
+            Welcome. I am Shaik Sameer, an undergraduate Computer Science student with an unyielding dedication to master the craft of software development from the ground up.
+          </p>
+
+          <p class="about-narrative">
+            My journey began with deep foundational programming in C and C++, which instilled in me an appreciation for algorithmic efficiency, structured problem solving, and computational logic. Today, I am channeling those disciplines into modern web technologies—studying HTML, CSS, JavaScript, and responsive UI architecture to create intuitive and polished user experiences.
+          </p>
+
+          <p class="about-narrative">
+            What distinguishes my approach is an innate harmony between rigorous logic and creative execution. I am a self-motivated learner who embraces challenges as opportunities to expand my skill set, communicating ideas transparently and working diligently towards real-world engineering excellence.
+          </p>
+
+          <!-- Core Pillars Grid -->
+          <div class="pillars-grid">
+            <div class="pillar-item">
+              <div class="pillar-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <div>
+                <h4 class="pillar-title">Creativity</h4>
+                <p class="pillar-desc">Designing clean, elegant solutions with aesthetic precision and thoughtful UX.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+              <div>
+                <h4 class="pillar-title">Communication</h4>
+                <p class="pillar-desc">Articulate, collaborative, and adept across multilingual environments.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              </div>
+              <div>
+                <h4 class="pillar-title">Self-Motivation</h4>
+                <p class="pillar-desc">Disciplined independent learning, proactive curiosity, and strong work ethic.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+              </div>
+              <div>
+                <h4 class="pillar-title">Continuous Learning</h4>
+                <p class="pillar-desc">Relentlessly investigating modern web architectures and emerging paradigms.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. EDUCATION TIMELINE ==================== -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <div class="section-header reveal-init reveal-up">
+        <span class="section-badge">ACADEMIC TIMELINE</span>
+        <h2 class="section-title">Education & <span class="gold-gradient">Milestones</span></h2>
+        <p class="section-desc">
+          A documented, verifiable record of my academic pursuit in Computer Science and secondary education.
+        </p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <!-- Milestone 1: B.Sc. Honours (Currently Pursuing) -->
+        <div class="timeline-item left reveal-init reveal-left">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="timeline-badge-row">
+              <span class="badge-status-active">Currently Pursuing</span>
+              <span class="badge-period">2026 – 2029</span>
+            </div>
+            <h3 class="timeline-degree">B.Sc. Honours — Computer Science</h3>
+            <p class="timeline-institution">Sri Venkateshwara Degree College, Atmakur</p>
+            <p class="timeline-university">Affiliated with Rayalaseema University</p>
+            <div class="timeline-marks-box">
+              <span class="marks-label">Academic Program:</span>
+              <span class="marks-number">Undergraduate Honours</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 2: Intermediate (12th Standard) -->
+        <div class="timeline-item right reveal-init reveal-right delay-200">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="timeline-badge-row">
+              <span class="badge-status-done">Completed</span>
+              <span class="badge-period">Passing Year: 2025</span>
+            </div>
+            <h3 class="timeline-degree">Intermediate — 12th Standard</h3>
+            <p class="timeline-institution">Therisa Junior College, Atmakur</p>
+            <p class="timeline-university">Higher Secondary Education</p>
+            <div class="timeline-marks-box">
+              <span class="marks-label">Total Marks Secured:</span>
+              <span class="marks-number">865</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 3: SSC (10th Standard) -->
+        <div class="timeline-item left reveal-init reveal-left delay-400">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="timeline-badge-row">
+              <span class="badge-status-done">Completed</span>
+              <span class="badge-period">Passing Year: 2023</span>
+            </div>
+            <h3 class="timeline-degree">SSC — 10th Standard</h3>
+            <p class="timeline-institution">Shantiniketan High School, Atmakur</p>
+            <p class="timeline-university">Secondary School Certificate</p>
+            <div class="timeline-marks-box">
+              <span class="marks-label">Total Marks Secured:</span>
+              <span class="marks-number">518</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. TECHNICAL SKILLS ==================== -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header reveal-init reveal-up">
+        <span class="section-badge">TECHNICAL REPERTOIRE</span>
+        <h2 class="section-title">Skills & <span class="gold-gradient">Explorations</span></h2>
+        <p class="section-desc">
+          Solid foundations in procedural and object-oriented systems, accompanied by active deep-dive exploration into modern web technologies.
+        </p>
+      </div>
+
+      <!-- Category 1: Current Core Skills -->
+      <div class="skills-category-wrapper reveal-init reveal-up">
+        <div class="skills-category-title">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          </div>
+          <h3 class="category-heading">Core Programming Languages</h3>
+          <span class="category-badge">Active Foundation</span>
+        </div>
+
+        <div class="skills-grid">
+          <!-- C Card -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-4a4 4 0 0 0-4 4v0a4 4 0 0 0 4 4h4"></path></svg>
+              </div>
+              <div>
+                <h4 class="skill-name">C Programming</h4>
+                <span class="skill-meta">Systems & Logic</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Strong grasp of procedural logic, memory pointers, dynamic allocation, control flow, functions, and fundamental data representation.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Memory Management</span>
+              <span class="skill-tag">Pointers</span>
+              <span class="skill-tag">Data Structures</span>
+              <span class="skill-tag">Algorithms</span>
+            </div>
+          </div>
+
+          <!-- C++ Card -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 10H13a3.5 3.5 0 0 0-3.5 3.5v0a3.5 3.5 0 0 0 3.5 3.5h3.5"></path><line x1="18.5" y1="12" x2="21.5" y2="12"></line><line x1="20" y1="10.5" x2="20" y2="13.5"></line></svg>
+              </div>
+              <div>
+                <h4 class="skill-name">C++ Programming</h4>
+                <span class="skill-meta">OOP & Modularity</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Solid understanding of object-oriented paradigms, classes, inheritance, polymorphism, encapsulation, and Standard Template Library (STL).
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Object-Oriented Programming</span>
+              <span class="skill-tag">STL</span>
+              <span class="skill-tag">Modularity</span>
+              <span class="skill-tag">Problem Solving</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 2: Currently Exploring -->
+      <div class="skills-category-wrapper reveal-init reveal-up delay-200">
+        <div class="skills-category-title">
+          <div class="category-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+          </div>
+          <h3 class="category-heading">Currently Exploring</h3>
+          <span class="category-badge">Active Learning</span>
+        </div>
+
+        <div class="skills-grid">
+          <!-- HTML Card -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>
+              </div>
+              <div>
+                <h4 class="skill-name">HTML5</h4>
+                <span class="skill-meta">Markup & Semantics</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Structuring web documents with modern semantic tags, accessibility best practices, and clean document layouts.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Semantic HTML</span>
+              <span class="skill-tag">Web Standards</span>
+              <span class="skill-tag">Accessibility</span>
+            </div>
+          </div>
+
+          <!-- CSS Card -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+              </div>
+              <div>
+                <h4 class="skill-name">CSS3</h4>
+                <span class="skill-meta">Styling & Design</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Crafting responsive interfaces, Flexbox, CSS Grid layouts, custom variables, smooth transitions, and dark luxury aesthetics.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Flexbox & Grid</span>
+              <span class="skill-tag">Animations</span>
+              <span class="skill-tag">Responsive UI</span>
+            </div>
+          </div>
+
+          <!-- JavaScript Card -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <div>
+                <h4 class="skill-name">JavaScript</h4>
+                <span class="skill-meta">Dynamic Logic</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Learning modern ES6+ features, asynchronous programming, DOM interactions, event-driven interfaces, and client-side logic.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">ES6+</span>
+              <span class="skill-tag">DOM Manipulation</span>
+              <span class="skill-tag">Event Handling</span>
+            </div>
+          </div>
+
+          <!-- Web Development Card -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <div>
+                <h4 class="skill-name">Web Development</h4>
+                <span class="skill-meta">Ecosystem & Workflows</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Connecting design, code, and developer tooling into cohesive digital experiences. Exploring modern dev environments and version control.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Responsive Design</span>
+              <span class="skill-tag">Git / GitHub</span>
+              <span class="skill-tag">UI/UX Thinking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. PROJECTS SHOWCASE ==================== -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header reveal-init reveal-up">
+        <span class="section-badge">PORTFOLIO SHOWCASE</span>
+        <h2 class="section-title">Projects <span class="gold-gradient">Under Construction</span></h2>
+        <p class="section-desc">
+          Laying solid algorithmic and engineering foundations before shipping production-grade digital applications.
+        </p>
+      </div>
+
+      <!-- Central Centerpiece Card -->
+      <div class="showcase-centerpiece reveal-init reveal-scale">
+        <div class="showcase-inner">
+          <div class="blueprint-grid-overlay"></div>
+          
+          <div class="coming-soon-emblem">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+
+          <span class="showcase-tag">INNOVATION PIPELINE</span>
+          <h3 class="showcase-heading">PROJECTS COMING SOON</h3>
+          
+          <p class="showcase-statement">
+            "I'm currently learning, exploring and preparing to build my first projects. Exciting things are on the way."
+          </p>
+
+          <!-- Future Architectural Blueprint Placeholders -->
+          <div class="future-blueprints-grid">
+            <div class="blueprint-card">
+              <div class="blueprint-number">CONCEPT // 01</div>
+              <h4 class="blueprint-title">Interactive Web Applications</h4>
+              <p class="blueprint-desc">Responsive web interfaces powered by modern JavaScript, clean semantic structure, and bespoke luxury design.</p>
+              <div class="blueprint-status">
+                <span class="blueprint-dot"></span>
+                <span>Research & Architecture</span>
+              </div>
+            </div>
+
+            <div class="blueprint-card">
+              <div class="blueprint-number">CONCEPT // 02</div>
+              <h4 class="blueprint-title">C / C++ Systems Utilities</h4>
+              <p class="blueprint-desc">Command-line tools, algorithm visualizers, and core computer science data structure implementations.</p>
+              <div class="blueprint-status">
+                <span class="blueprint-dot"></span>
+                <span>Foundational Coding</span>
+              </div>
+            </div>
+
+            <div class="blueprint-card">
+              <div class="blueprint-number">CONCEPT // 03</div>
+              <h4 class="blueprint-title">Real-World Client Solutions</h4>
+              <p class="blueprint-desc">Production web experiences tailored for businesses, freelance projects, and community utilities.</p>
+              <div class="blueprint-status">
+                <span class="blueprint-dot"></span>
+                <span>Queued for Development</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scalability Note -->
+      <div class="project-architecture-note reveal-init reveal-up delay-200">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        <span>
+          <strong>Modular Codebase:</strong> This portfolio is engineered to seamlessly accommodate live project cards, live demo links, and GitHub repositories as they are launched.
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 8. CAREER GOALS ==================== -->
+  <section id="goals" class="section goals-section">
+    <div class="container">
+      <div class="section-header reveal-init reveal-up">
+        <span class="section-badge">FUTURE AMBITIONS</span>
+        <h2 class="section-title">Career <span class="gold-gradient">Vision & Roadmap</span></h2>
+        <p class="section-desc">
+          Clear, purposeful objectives shaping my journey from undergraduate student to industry-ready software engineer.
+        </p>
+      </div>
+
+      <div class="goals-grid">
+        <!-- Goal 1 -->
+        <div class="goal-card reveal-init reveal-up">
+          <div class="goal-card-top">
+            <div class="goal-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <span class="goal-index">01</span>
+          </div>
+          <h3 class="goal-title">Become a Skilled Software Developer</h3>
+          <p class="goal-desc">
+            Master the core principles of software engineering, robust system design, clean architecture, and reliable problem-solving.
+          </p>
+        </div>
+
+        <!-- Goal 2 -->
+        <div class="goal-card reveal-init reveal-up delay-100">
+          <div class="goal-card-top">
+            <div class="goal-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <span class="goal-index">02</span>
+          </div>
+          <h3 class="goal-title">Specialize in Web Development</h3>
+          <p class="goal-desc">
+            Deepen knowledge in the full modern web stack, mastering frontend interactivity, server interactions, and responsive design systems.
+          </p>
+        </div>
+
+        <!-- Goal 3 -->
+        <div class="goal-card reveal-init reveal-up delay-200">
+          <div class="goal-card-top">
+            <div class="goal-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+            </div>
+            <span class="goal-index">03</span>
+          </div>
+          <h3 class="goal-title">Build Useful Digital Experiences</h3>
+          <p class="goal-desc">
+            Create software and web products that solve tangible problems, delight users, and deliver measurable real-world utility.
+          </p>
+        </div>
+
+        <!-- Goal 4 -->
+        <div class="goal-card reveal-init reveal-up delay-300">
+          <div class="goal-card-top">
+            <div class="goal-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </div>
+            <span class="goal-index">04</span>
+          </div>
+          <h3 class="goal-title">Improve Real-World Programming Skills</h3>
+          <p class="goal-desc">
+            Advance beyond classroom theory by collaborating on codebases, applying industry design patterns, and writing production-ready code.
+          </p>
+        </div>
+
+        <!-- Goal 5 -->
+        <div class="goal-card reveal-init reveal-up delay-400">
+          <div class="goal-card-top">
+            <div class="goal-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <span class="goal-index">05</span>
+          </div>
+          <h3 class="goal-title">Explore Freelancing Opportunities</h3>
+          <p class="goal-desc">
+            Engage with clients globally, build bespoke websites, deliver high quality results under real deadlines, and establish a personal brand.
+          </p>
+        </div>
+
+        <!-- Goal 6 -->
+        <div class="goal-card reveal-init reveal-up delay-500">
+          <div class="goal-card-top">
+            <div class="goal-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            </div>
+            <span class="goal-index">06</span>
+          </div>
+          <h3 class="goal-title">Continuously Learn Modern Technologies</h3>
+          <p class="goal-desc">
+            Stay ahead of technological evolutions through consistent research, experimentations with modern frameworks, and relentless curiosity.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 9. PERSONAL STRENGTHS & LANGUAGES ==================== -->
+  <section class="section strengths-languages-section">
+    <div class="container">
+      <div class="dual-columns-grid">
+        <!-- Personal Strengths Column -->
+        <div class="panel-card reveal-init reveal-left">
+          <div class="panel-header">
+            <div class="panel-icon-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            </div>
+            <h3 class="panel-title">Personal Strengths</h3>
+          </div>
+
+          <div class="strengths-list">
+            <div class="strength-item">
+              <svg class="strength-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path></svg>
+              <div>
+                <h4 class="strength-name">Creativity</h4>
+                <p class="strength-desc">Approaching problems with imagination, fresh perspectives, and an eye for refined visual aesthetics.</p>
+              </div>
+            </div>
+
+            <div class="strength-item">
+              <svg class="strength-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <div>
+                <h4 class="strength-name">Communication</h4>
+                <p class="strength-desc">Expressing concepts clearly, listening actively, and collaborating effectively across teams and languages.</p>
+              </div>
+            </div>
+
+            <div class="strength-item">
+              <svg class="strength-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 8 12 12 16 16 12 12 8"></polygon></svg>
+              <div>
+                <h4 class="strength-name">Self-Motivation</h4>
+                <p class="strength-desc">Internally driven to pursue mastery, persist through complex debugging, and take initiative independently.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages Column -->
+        <div class="panel-card reveal-init reveal-right delay-200">
+          <div class="panel-header">
+            <div class="panel-icon-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <h3 class="panel-title">Languages</h3>
+          </div>
+
+          <div class="languages-grid">
+            <div class="language-card">
+              <div class="lang-glyph">En</div>
+              <h4 class="lang-name">English</h4>
+              <span class="lang-level">Professional Proficiency</span>
+            </div>
+
+            <div class="language-card">
+              <div class="lang-glyph">తె</div>
+              <h4 class="lang-name">Telugu</h4>
+              <span class="lang-level">Native & Fluent</span>
+            </div>
+
+            <div class="language-card">
+              <div class="lang-glyph">हिं</div>
+              <h4 class="lang-name">Hindi</h4>
+              <span class="lang-level">Proficient & Conversational</span>
+            </div>
+
+            <div class="language-card">
+              <div class="lang-glyph">اردو</div>
+              <h4 class="lang-name">Urdu</h4>
+              <span class="lang-level">Proficient & Conversational</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 10. CONTACT SECTION ==================== -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header reveal-init reveal-up">
+        <span class="section-badge">INITIATE CONTACT</span>
+        <h2 class="section-title">Let's Build <span class="gold-gradient">Something Exceptional</span></h2>
+        <p class="section-desc">
+          Whether you want to discuss potential collaborations, internships, or web projects, my inbox is always open.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Direct Contact Details & Social Profiles -->
+        <div class="contact-info-panel reveal-init reveal-left">
+          <div class="contact-card-direct">
+            <div class="direct-meta">
+              <div class="direct-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div>
+                <span class="direct-label">Direct Email Address</span>
+                <div class="direct-value">sameersk1818@gmail.com</div>
+              </div>
+            </div>
+
+            <div class="email-actions-row">
+              <button class="btn-copy-email btn-copy-email-trigger" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span>Copy Email</span>
+              </button>
+              <a href="mailto:sameersk1818@gmail.com" class="btn-copy-email">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                <span>Open Mail Client</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Social Channels Box -->
+          <div class="social-profiles-box">
+            <h4 class="social-profiles-title">Professional Profiles</h4>
+            <div class="social-channels-list">
+              <a href="https://github.com/sameer18180" target="_blank" rel="noopener noreferrer" class="social-channel-item">
+                <div class="channel-left">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span class="channel-name">GitHub / sameer18180</span>
+                </div>
+                <span class="channel-arrow">↗</span>
+              </a>
+
+              <a href="https://www.linkedin.com/in/ps%CA%8F%E1%B4%84%CA%9C%E1%B4%8F-s%E1%B4%80%E1%B4%8D%E1%B4%87%E1%B4%87%CA%80-1996b4358" target="_blank" rel="noopener noreferrer" class="social-channel-item">
+                <div class="channel-left">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  <span class="channel-name">LinkedIn / Shaik Sameer</span>
+                </div>
+                <span class="channel-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Premium Contact Form -->
+        <div class="contact-form-panel reveal-init reveal-right delay-200">
+          <form id="portfolio-contact-form" novalidate>
+            <div class="form-group">
+              <label for="form-name" class="form-label">Your Full Name *</label>
+              <input type="text" id="form-name" class="form-input" placeholder="e.g. Alexander Hamilton" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">Your Email Address *</label>
+              <input type="email" id="form-email" class="form-input" placeholder="e.g. name@domain.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject" class="form-label">Subject</label>
+              <input type="text" id="form-subject" class="form-input" placeholder="e.g. Internship Inquiry / Web Project">
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">Your Message *</label>
+              <textarea id="form-message" class="form-textarea" placeholder="Share your message, project idea, or opportunity..." required></textarea>
+            </div>
+
+            <div id="form-feedback" class="form-feedback" role="alert"></div>
+
+            <button type="submit" class="btn-submit-message">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 11. FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3 class="footer-name">SHAIK SAMEER</h3>
+          <p class="footer-quote">"Building my future, one line of code at a time."</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#goals">Goals</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#hero" id="btn-back-to-top" class="btn-back-to-top" aria-label="Back to top of page">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © <span id="current-year">2026</span> Shaik Sameer. All rights reserved.
+        </div>
+        <div>
+          Designed with Cinematic Luxury & Modern Technology.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification System -->
+  <div id="toast" role="status" aria-live="polite">
+    <span id="toast-text">Notification</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

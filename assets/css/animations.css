@@ -1,0 +1,220 @@
+/* ==========================================================================
+   SHAIK SAMEER — LUXURY DEVELOPER PORTFOLIO
+   SIGNATURE ANIMATION SYSTEM & KEYFRAMES
+   ========================================================================== */
+
+/* --- 1. Page Opening Curtain & Light Sweep --- */
+@keyframes curtainSlideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  85% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+}
+
+@keyframes emblemPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.25), inset 0 0 15px rgba(212, 175, 55, 0.2);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 0 45px rgba(212, 175, 55, 0.5), inset 0 0 25px rgba(212, 175, 55, 0.35);
+  }
+}
+
+@keyframes goldLightSweep {
+  0% {
+    background-position: -250% 0;
+  }
+  100% {
+    background-position: 250% 0;
+  }
+}
+
+@keyframes goldShineRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- 2. Ambient Atmosphere & Floating Elements --- */
+@keyframes ambientFloatSlow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(25px, -35px) scale(1.08);
+  }
+  66% {
+    transform: translate(-20px, 25px) scale(0.95);
+  }
+}
+
+@keyframes ambientPulse {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* --- 3. Scroll Down Pip Bounce --- */
+@keyframes scrollPipMove {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateY(14px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+
+/* --- 4. Rotating Conic Gradient for Coming Soon Project Card --- */
+@keyframes rotateConic {
+  from {
+    --conic-angle: 0deg;
+    transform: rotate(0deg);
+  }
+  to {
+    --conic-angle: 360deg;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes borderGlowPulse {
+  0%, 100% {
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.08);
+  }
+  50% {
+    border-color: rgba(212, 175, 55, 0.7);
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.22);
+  }
+}
+
+/* --- 5. Timeline Glow Pulse --- */
+@keyframes timelineNodeGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.5), 0 0 15px rgba(212, 175, 55, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(212, 175, 55, 0), 0 0 25px rgba(212, 175, 55, 0.6);
+  }
+}
+
+/* --- 6. Live Status Dot Pulse --- */
+@keyframes statusDotPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(212, 175, 55, 0);
+  }
+}
+
+/* --- 7. Interactive Hover Shimmer --- */
+@keyframes buttonSweep {
+  0% {
+    transform: translateX(-100%) skewX(-25deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-25deg);
+  }
+}
+
+/* --- 8. Reveal on Scroll Utilities --- */
+.reveal-init {
+  opacity: 0;
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-up {
+  transform: translateY(35px);
+}
+
+.reveal-down {
+  transform: translateY(-35px);
+}
+
+.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal-right {
+  transform: translateX(40px);
+}
+
+.reveal-scale {
+  transform: scale(0.92);
+}
+
+/* Active State Triggered by Observer */
+.reveal-visible {
+  opacity: 1 !important;
+  transform: translate(0, 0) scale(1) !important;
+}
+
+/* Stagger Delays for Sequential Elements */
+.delay-100 { transition-delay: 100ms !important; }
+.delay-200 { transition-delay: 200ms !important; }
+.delay-300 { transition-delay: 300ms !important; }
+.delay-400 { transition-delay: 400ms !important; }
+.delay-500 { transition-delay: 500ms !important; }
+.delay-600 { transition-delay: 600ms !important; }
+.delay-700 { transition-delay: 700ms !important; }
+.delay-800 { transition-delay: 800ms !important; }
+
+/* Reduced Motion Accessibility Override */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .reveal-init {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  #preloader {
+    display: none !important;
+  }
+}
